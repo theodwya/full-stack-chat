@@ -13,7 +13,8 @@ def create_user(
         user: UserCreate, db: Session = Depends(get_db)):
     """
     Create User endpoint:
-    - This endpoint receives a JSON body with 'username', 'email', and 'password'.
+    - This endpoint receives a JSON body with 'username', 'email', and
+      'password'.
     - The body is parsed and validated using the Pydantic model.
 
     Args:

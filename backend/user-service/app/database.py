@@ -5,7 +5,8 @@ from sqlalchemy.orm import sessionmaker
 # Database connection parameters
 DATABASE_URL = "postgresql://postgres:password@10.0.0.40:5433/userdb"
 
-# Factory Method Pattern: Encapsulates the logic for creating a SQLAlchemy engine object.
+# Factory Method Pattern: Encapsulates the logic for creating
+# a SQLAlchemy engine object.
 
 
 def create_engine_instance():
@@ -24,13 +25,15 @@ engine = create_engine_instance()
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 
-# Dependency Injection Pattern: Provides a database session for routes/services.
+# Dependency Injection Pattern:
+# Provides a database session for routes/services.
 
 
 def get_db():
     """
     Dependency Injection:
-    Provides a session object to the calling function in a controlled and managed way.
+    Provides a session object to the calling function in a controlled and
+    managed way.
     """
     db = SessionLocal()
     try:

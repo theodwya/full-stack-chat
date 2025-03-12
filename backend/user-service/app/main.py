@@ -13,10 +13,12 @@ app = FastAPI()
 # the underlying user service (routes, models, database).
 app.include_router(user_routes.router, prefix="/api/v1", tags=["Users"])
 
+
 @app.get("/")
 def home():
     """
     Facade Pattern:
-    This endpoint provides a simple interface for checking if the service is running.
+    This endpoint provides a simple interface for checking if the service is
+    running.
     """
     return {"message": "Welcome to User Service"}
