@@ -1,0 +1,17 @@
+# Virtual environments
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Operating system files
+.DS_Store
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Ignore Docker container logs
+*.log
+docker-compose.override.yml
