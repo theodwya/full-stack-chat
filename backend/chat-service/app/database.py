@@ -3,7 +3,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 # Factory Method Pattern: Encapsulates database connection creation
-DATABASE_URL = "postgresql://postgres:password@10.0.0.40:5433/userdb"
+DATABASE_URL = "postgresql://postgres:password@localhost:5433/chatdb"
 
 # Factory Method Pattern: Encapsulates the logic for creating
 # a SQLAlchemy engine object.
@@ -35,7 +35,7 @@ def get_db():
     """
     Factory Method:
     Provides a new database session object each time it is called.
-    This allows the User Service to abstract away the connection logic,
+    This allows the Chat Service to abstract away the connection logic,
     keeping the code modular and testable.
 
     Dependency Injection:
